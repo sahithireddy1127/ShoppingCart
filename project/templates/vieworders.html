@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2 align="center"> Please provide your details</h2>
+<div class="col-md-4">
+   
+</div>
+<div class="col-md-4 well">
+
+<form action="" method="post">
+
+      <dl>
+        <dt>name:
+        <dd><input type="text" name="username">
+        
+        <dt>Phone:
+        <dd><input type="text" name="phone">
+       
+        <dd><input type="submit" value="submit"><br>
+        	
+
+      </dl>
+
+    </form>
+   
+            
+            
+            <table class="table table-hover">
+    <thead>
+      <tr>
+        <h5>your order details are:</h5>
+        <th>Book id</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    {%for o in order %}
+    <tbody>
+      <tr>
+        <td>{{o.bookid}}</td>
+        <td>{{o.quantity}}</td>
+        <td>{{(o.quantity*o.price)}}</td>
+      </tr>
+    </tbody>
+    {%endfor%}
+     <p> total price with 10% tax:{{price}}</p>
+  </table>
+            
+            
+            
+
+</div>
+<div class="col-md-4">
+   
+</div>
+{% endblock %}

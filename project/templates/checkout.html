@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2 align="center"> Please provide your details</h2>
+<div class="col-md-4">
+   
+</div>
+<div class="col-md-4 well">
+
+<form action="" method="post">
+
+      <dl>
+        <dt>name:
+        <dd><input type="text" name="username">
+        
+        <dt>Phone:
+        <dd><input type="text" name="phone">
+        <dt>Address:
+        <dd><input type="text" name="address">
+        <dd><input type="submit" value="submit"><br>
+        	
+
+      </dl>
+
+    </form>
+    {% if flag == 1 %}
+        	<p style="color: green"><strong> your order has been  placed successfully!!!!!</strong></p>
+        	<h5>your order details are:</h5>
+        	<span>Name:</span>
+        	<span>{{name}}</span>
+        	{% for o in orders %}
+        	<p>bookid:{{o.bookid}}  cost:{{o.price}}  quantity{{o.quantity}}</p>
+        	{% endfor %}
+
+        	{% endif %}
+
+</div>
+<div class="col-md-4">
+   
+</div>
+
+
+
+
+
+
+
+{% endblock %}

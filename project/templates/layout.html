@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>shopping cart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5uPq744t5XxUVFfaK3a4mlmMb0n3LMUQiUNGtp3Acl5OnlC2p");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+    .dp{
+      width: 40%;
+      height: 179px;
+    }
+
+    .item{
+      margin-bottom: 5%;
+    }
+    
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">BookStore</a>
+    </div>
+   
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        <li><a href ="/vieworders">View orders </a></li>
+        
+    </ul>
+    
+  </div>
+</nav>
+
+<div class="container" >
+    {% block body %}
+    {% endblock %}
+</div>  
+
+</body>
+</html>
